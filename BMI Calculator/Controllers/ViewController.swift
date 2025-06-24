@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         let height = heightSlider.value
         let width = weigthSlider.value
         let BMI = width / pow(height, 2)
+        
+        let resultVC = self.storyboard?.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
+        resultVC.bmiValue =  "\(String(format: "%.2f", BMI))"
+        self.navigationController?.pushViewController(resultVC, animated: true)
+
     }
 }
 
