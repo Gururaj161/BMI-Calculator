@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         heightLabel.text = "\(String(format: "%.2f", sender.value)) m"
-        print("hi")
     }
     
     @IBAction func calculatePressedAction(_ sender: UIButton) {
